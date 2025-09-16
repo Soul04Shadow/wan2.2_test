@@ -1,8 +1,11 @@
 fastapi
-uvicorn
+uvicorn[standard]
 torch
 transformers
-diffusers
+diffusers>=0.21.0
 accelerate
 imageio[ffmpeg]
+safetensors
+huggingface-hub
 gradio==4.44.0
+xformers==0.0.20  # optional: improves speed if available on the image; may be skipped
