@@ -1,0 +1,17 @@
+name: wan2-video-app
+services:
+  - name: wan2-api
+    type: web
+    ports:
+      - port: 8000
+        protocol: http
+    env:
+      - name: WAN_MODEL
+        value: TencentARC/Wan2.2-T2V
+      - name: HF_TOKEN
+        value: "" # add via Koyeb secrets / env UI (do NOT commit token to GitHub)
+    run_command: uvicorn app:app --host 0.0.0.0 --port 8000 --workers 1
+    instance:
+      type: gpu-a100
+      disk: 200GB
+      memory: 180GB
