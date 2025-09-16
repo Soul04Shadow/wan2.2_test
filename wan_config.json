@@ -2,5 +2,5 @@
   "default_fps": 24,
   "default_duration": 10,
   "default_resolution": "720p",
-  "default_model": "wan2.2"
+  "default_model": "TencentARC/Wan2.2-T2V"
 }
